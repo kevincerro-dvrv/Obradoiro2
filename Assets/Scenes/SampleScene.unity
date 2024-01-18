@@ -1024,6 +1024,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 557196068768125424, guid: 55abf0939fcfe064aa6e7063c0da9804,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54f71d25e4d75244fb890facd94a7848, type: 2}
     - target: {fileID: 1000949243866427012, guid: 55abf0939fcfe064aa6e7063c0da9804,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1142,6 +1147,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 359916640}
+    - targetCorrespondingSourceObject: {fileID: 6207711677953224200, guid: 55abf0939fcfe064aa6e7063c0da9804,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359916642}
+    - targetCorrespondingSourceObject: {fileID: 6207711677953224200, guid: 55abf0939fcfe064aa6e7063c0da9804,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359916645}
   m_SourcePrefab: {fileID: 100100000, guid: 55abf0939fcfe064aa6e7063c0da9804, type: 3}
 --- !u!1 &359916636 stripped
 GameObject:
@@ -1205,10 +1218,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 359916645}
+        m_TargetAssemblyTypeName: HoverMaterialSelector, Assembly-CSharp
+        m_MethodName: SetHoverMaterial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 359916645}
+        m_TargetAssemblyTypeName: HoverMaterialSelector, Assembly-CSharp
+        m_MethodName: SetNormalMaterial
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1217,7 +1254,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 359916642}
+        m_TargetAssemblyTypeName: AttachSelector, Assembly-CSharp
+        m_MethodName: SetAttach
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1341,6 +1390,41 @@ MonoBehaviour:
   debug: 0
   laserRayGO: {fileID: 359916638}
   laserBeam: {fileID: 359916637}
+--- !u!114 &359916642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359916636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c8fe3dde5e5884aa36eaddfdf19383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagList:
+  - LeftPanel
+  - CenterPanel
+  - RightPanel
+  attachList:
+  - {fileID: 1561753248}
+  - {fileID: 273231628}
+  - {fileID: 1621007623}
+  defaultAttach: {fileID: 283894846}
+--- !u!114 &359916645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359916636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b9905f03cd7634da2d4aeca541bb46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 2000401189}
+  hoverMaterial: {fileID: 2100000, guid: aaa75a549a1fc964d8c9d005a2fb44e5, type: 2}
 --- !u!1 &361656752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3511,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7381609413092885615, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
+        type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8529866003967634270, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4653,6 +4742,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7381609413092885615, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
+        type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8529866003967634270, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5243,6 +5337,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 74289049}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!23 &2000401189 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 557196068768125424, guid: 55abf0939fcfe064aa6e7063c0da9804,
+    type: 3}
+  m_PrefabInstance: {fileID: 359916635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2026005025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5304,6 +5404,11 @@ PrefabInstance:
     - target: {fileID: 2743233179294754473, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381609413092885615, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
+        type: 3}
+      propertyPath: m_ShowInteractableHoverMeshes
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8529866003967634270, guid: 652f59c3e9b0c0345ac79f1f8e8e5fe4,
